@@ -29,77 +29,92 @@
     font-style: normal;
 }
 
-@media screen and (max-width: 480px) {
-  .text {
-    font-size: 30px; /* 调整字体大小以适应较小屏幕 */
-    letter-spacing: 1px; /* 调整字间距 */
-    --count: 13; /* 保持字符计数一致或根据需要调整 */
-  }
+/* 当屏幕宽度小于等于 1024px */
+@media screen and (max-width: 1024px) {
+    .text {
+        font-size: 5vw; /* 根据屏幕宽度缩小字体 */
+    }
 }
 
-*{
+/* 当屏幕宽度小于等于 768px */
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 5vw;
+        white-space: normal; /* 允许文本换行 */
+        word-break: break-word; /* 允许单词中间换行 */
+    }
+}
+
+/* 当屏幕宽度小于等于 480px */
+@media screen and (max-width: 480px) {
+    .text {
+        font-size: 5vw;
+        white-space: normal; /* 允许文本换行 */
+        word-break: break-word; /* 允许单词中间换行 */
+    }
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* 确保 padding 和 border 不会影响元素的总宽度 */
 }
-body{
+
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0e5d6;
+    overflow: hidden; /* 防止左右滚动 */
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-.text{
+
+.text {
     position: relative;
     color: #242a5c;
-    font-size: 55px;
+    font-size: 5vw; /* 字体大小根据屏幕宽度调整 */
     font-family: 'FuturaPT-BookObl';
     letter-spacing: 2px;
-    width: 67px;
-    white-space: nowrap;
+    text-align: center;
+    white-space: nowrap; /* 默认保持单行 */
     overflow: hidden;
-    --count: 13;
-    animation: typing 4s steps(var(--count)) forwards;
+    max-width: 100%; /* 确保不会超出屏幕宽度 */
+    animation: typing 4s steps(13) forwards;
     -webkit-box-reflect: below 1.5px linear-gradient(transparent 60%, #ef629f);
 }
+
 @keyframes typing {
-    0%{
+    0% {
         width: 0;
     }
-    100%{
-        width: calc(var(--count) * 65px);
+    100% {
+        width: 100%;
     }
-} 
-.text::after{
+}
+
+.text::after {
     content: "";
     width: 3px;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    font-family: 'FuturaPT-BookObl';
     background-color: #d6323e;
     animation: blink 1s linear infinite;
 }
+
 @keyframes blink {
-    0%,49%{
+    0%, 49% {
         opacity: 0;
     }
-    50%,100%{
+    50%, 100% {
         opacity: 1;
     }
 }
-.flower-container {
-      position: relative;
-      cursor: pointer;
-    }
 
-.flower {
-      position: absolute;
-      width: 0;
-      height: 0;
-      transition: all 0.5s ease;
-    }
+
 </style>
