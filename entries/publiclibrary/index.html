@@ -501,98 +501,44 @@ hr {
 }
 
 
-@media (max-width: 390px) {
-    /* 屏幕宽度为390px及以下时，应用以下样式 */
-
-    /* 页面1样式调整 */
-    #page-1 {
-        height: auto; /* 动态调整高度 */
-    }
-    .title-1 h1,
-    .title-1 h3 {
-        font-size: 20px; /* 调整字体大小 */
-    }
-    .title-1 h2,
-    .title-1 h4 {
-        font-size: 50px;
-    }
-    .title-1 p {
-        font-size: 20px;
+@media only screen and (max-width: 390px) { /* 针对 iPhone 13 Pro 的屏幕 */
+    #page-1, #page-2, #page-3, #page-4, #page-5, #page-6, #page-7 {
+        height: 100vh; /* 每一页的高度为 100% 屏幕高度 */
+        overflow: hidden; /* 确保没有滚动条 */
     }
 
-    .image-container-1 img {
-        width: 100%; /* 让图片自适应宽度 */
-        height: auto; /* 让图片自动调整高度 */
-    }
-
-    /* 改变导航栏和链接的布局 */
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    main a {
-        font-size: 18px;
-        margin: 5px 0; /* 调整链接的间距 */
-    }
-    nav {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    nav a {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    /* 页面2到页面7的布局调整 */
     .container {
-        flex-direction: column; /* 让页面内容垂直排列 */
+        flex-direction: column; /* 让 container 的子元素排列为列 */
+        height: 100vh; /* 让容器的高度占满屏幕 */
     }
-    .left-panel, .right-panel {
-        flex: 1; /* 让左右面板等分宽度 */
+
+    .left-panel {
+        flex: 7;
+        background-color: #fcbb52;
+        padding: 10px;
+        order: 1; /* 确保左边面板在上 */
+    }
+
+    .right-panel {
+        flex: 3;
+        background-color: white;
+        padding: 20px;
+        order: 2; /* 将右边面板移到下方 */
+        margin-top: auto; /* 将右面板拉到容器底部 */
+    }
+
+    .right-panel .title-2 h1, .right-panel .title-2 h2, .right-panel .title-2 h3, .right-panel .title-2 h4, .right-panel .title-2 h5 {
+        font-size: 16px; /* 在小屏幕上调整标题字体大小 */
     }
 
     .image-container-2 img {
-        width: 100%; /* 确保图片自适应宽度 */
-        height: auto;
+        width: 100%; /* 确保图片占满容器宽度 */
+        height: auto; /* 自适应高度 */
     }
 
     .paragraph-1 {
         font-size: 16px; /* 调整段落字体大小 */
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-    }
-
-    .vertical-line {
-        display: none; /* 在小屏设备上隐藏垂直线 */
-    }
-
-    .title-2 h1,
-    .title-2 h2,
-    .title-2 h3,
-    .title-2 h4,
-    .title-2 h5 {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    #myButton {
-        left: 45%; /* 调整按钮位置 */
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    .tooltip {
-        display: none; /* 隐藏tooltip */
-    }
-
-    .homepage {
-        font-size: 12px;
-        top: 30px;
-        padding: 8px;
-        width: auto;
+        padding: 10px 20px; /* 添加适当的内边距 */
     }
 }
 </style>
