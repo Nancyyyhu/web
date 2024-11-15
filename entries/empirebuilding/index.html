@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>双层页面</title>
+    <title>interpages</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+
         <div class="layer layer1">
             <div class="image-box">
                 <img src="images/publiclibrary.jpg" alt="Image 1">
@@ -17,18 +18,85 @@
                 <img src="images/john.jpg" alt="Image 5">
             </div>
         </div>
+
         <div class="layer layer2">
             <div class="text-box">
-                <p>这里是文字信息层，包含一些文字内容。</p>
+                <h><b>THE NEW YORK PUBLIC LIBRARY: A TAPESTRY OF STORIES AND IDEAS</b></h>
+                <br>
+                <br>
+                <p><b>Origion & Dreams</b>
+                  <br>
+                The story begins in 1895, a time filled with passion and dreams. I, the predecessor of the New York Public Library, emerged from the union of several small libraries, merging collections to create a shared wellspring of knowledge for everyone in this growing metropolis. As New York City blossomed and more people flocked to its streets, my founders dreamed of an even grander institution, a sanctuary for learning that could hold thousands of books, accessible to all who sought wisdom. After years of planning and dedication, in 1902, I found my majestic home at Fifth Avenue and 42nd Street—a magnificent main branch, with soaring marble walls and reading rooms bathed in light. I became more than just a library; I transformed into a vital center for cultural exchange, reflecting the indomitable spirit and ambition of the city itself. Here, within my walls, generations would find inspiration, knowledge, and a sense of community.
+                <br>
+                <br>
+                <b>Growth & Transformation</p>
                 <button onclick="window.location.href='https://www.example.com';">跳转到其他页面</button>
             </div>
         </div>
+
     </div>
 </body>
 </html>
 
 
 <style>
+@font-face{
+     font-family: 'FuturaPT-Book';
+     src:url('fonts/FuturaPT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+     font-family: 'FuturaPT-BookObl';
+     src:url('fonts/FuturaPT-BookObl.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+     font-family: 'FuturaPT-Heavy';
+     src:url('fonts/FuturaPT-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+     font-family: 'FuturaPT-HeavyObl';
+     src:url('fonts/FuturaPT-HeavyObl.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (max-width: 1024px) {
+  .text-box h {
+font-size: 17px;
+  }
+  .text-box p{
+    font-size: 13px;
+  }
+}
+
+/* 当屏幕宽度小于等于 768px */
+@media screen and (max-width: 768px) {
+   .text-box h {
+font-size: 14px;
+  }
+  .text-box p{
+    font-size: 10px;
+  }
+}
+
+/* 当屏幕宽度小于等于 480px */
+@media screen and (max-width: 480px) {
+   .text-box h {
+font-size: 10px;
+  }
+  .text-box p{
+    font-size: 7px;
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -84,7 +152,17 @@ body, html {
 }
 
 .text-box {
-    text-align: center;
+    padding: 10px;
+}
+
+.text-box h {
+  font-size: 20px;
+  font-family: 'FuturaPT-Heavy';
+}
+
+.text-box p {
+  font-size: 15px;
+  font-family: 'FuturaPT-Book';
 }
 
 button {
