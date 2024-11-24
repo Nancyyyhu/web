@@ -1,34 +1,57 @@
-<html lang="zh">
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三层页面布局</title>
-
+    <title>guggenheim</title>
 </head>
+
 <body>
-    <div class="layer layer-1">
-        <div class="content">
-            <div class="image-group">
-                <img src="https://via.placeholder.com/100" alt="图片1">
-                <img src="https://via.placeholder.com/100" alt="图片2">
-                <!-- 继续添加图片 -->
-            </div>
+     <div class="layer layer-1">
+        <div class="image-group">
+            <p>COLLECTION</p>
+            <a href='https://nancyyyhu.github.io/web/entries/themet/index'><img src="images/themet.gif" alt="Image 1"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/statueofliberty/index'><img src="images/statueofliberty.gif" alt="Image 2"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/moma/index'><img src="images/moma.gif" alt="Image 3"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/patrick/index'><img src="images/patrick.gif" alt="Image 4"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/john/index'><img src="images/john.gif" alt="Image 5"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/publiclibrary/index'><img src="images/publiclibrary.gif" alt="Image 6"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/empirebuilding/index'><img src="images/empirebuilding.gif" alt="Image 7"></a>
+            <a href='https://nancyyyhu.github.io/web/entries/guggenheim/index'><img src="images/guggenheim.gif" alt="Image 8"></a>
         </div>
     </div>
+
     <div class="layer layer-2">
-        <div class="content">
-            <p>这是文字层</p>
-            <p>一些文本内容...</p>
-            <p>更多文本内容...</p>
+        <div class="text-box">
+            <h><b>The Solomon R.Guggenheim: A Nexus of Inspiration and Imagination</b></h>
+                <br>
+                <br>
+                <p><b>The Genesis of Modernism</b>
+                <br>
+                I was born in 1937 with the vision to transform the art world, thanks to the foresight of Solomon R. Guggenheim. My journey began in 1939 with the opening of the Museum of Non-Objective Painting in New York City, showcasing a pioneering collection that featured the works of Vasily Kandinsky and other avant-garde artists. Guided by the visionary curatorship of Hilla Rebay, my mission was to challenge the conventions of the art world and expose the public to the revolutionary power of non-objective art. As my collection grew and my influence expanded, it became clear that a purpose-built space was essential to house this burgeoning vision, leading to the commissioning of renowned architect Frank Lloyd Wright to design a museum that would embody the spirit of modern art in a way no institution had before.
+                <br>
+                <br>
+                <b>A Masterpiece of Architecture</b>
+                <br>
+                <br>
+                In the early 1940s, as my collection continued to grow and my mission expanded, I knew that I needed a space that was as innovative and groundbreaking as the art I housed. That’s when I turned to the visionary architect Frank Lloyd Wright. His radical spiral design, conceived to break away from traditional museum layouts, was unlike anything the world had seen before. Wright’s design was not simply a building—it was a statement. It offered an organic, continuous flow of space, where visitors could experience the art in an uninterrupted journey, ascending the spiraling ramp as they moved through the collection. Opening in 1959, the Solomon R. Guggenheim Museum itself became a masterpiece, harmoniously blending architecture and art in a dynamic dialogue. The fluidity of the design, with its natural light and sweeping curves, was an invitation for viewers to engage with the art on a deeper level, immersing them not just in the works on the walls but in the building itself. Wright’s vision broke from convention, challenging the rigid, boxy forms that had dominated traditional museum architecture and presenting a space that allowed the art to breathe and evolve within it. His spiral form became a symbol of my core philosophy: art should not just be seen; it should be experienced in a way that sparks new perspectives. This was a true fusion of architecture and art, an experience that redefined how we interact with creativity and visual culture.
+                <br>
+                <br>
+                <b>Odyssey of Art & Culture</b>
+                <br>
+                <br>
+                In the early 1940s, as my collection continued to grow and my mission expanded, I knew that I needed a space that was as innovative and groundbreaking as the art I housed. That’s when I turned to the visionary architect Frank Lloyd Wright. His radical spiral design, conceived to break away from traditional museum layouts, was unlike anything the world had seen before. Wright’s design was not simply a building—it was a statement. It offered an organic, continuous flow of space, where visitors could experience the art in an uninterrupted journey, ascending the spiraling ramp as they moved through the collection. Opening in 1959, the Solomon R. Guggenheim Museum itself became a masterpiece, harmoniously blending architecture and art in a dynamic dialogue. The fluidity of the design, with its natural light and sweeping curves, was an invitation for viewers to engage with the art on a deeper level, immersing them not just in the works on the walls but in the building itself. Wright’s vision broke from convention, challenging the rigid, boxy forms that had dominated traditional museum architecture and presenting a space that allowed the art to breathe and evolve within it. His spiral form became a symbol of my core philosophy: art should not just be seen; it should be experienced in a way that sparks new perspectives. This was a true fusion of architecture and art, an experience that redefined how we interact with creativity and visual culture.
+              </p>
         </div>
     </div>
+
     <div class="layer layer-3">
       <div class="image-box">
-                <img src="images/publiclibrary.jpg" alt="Image 1">
-                <img src="images/empirebuilding.jpg" alt="Image 2">
-                <img src="images/themet.jpg" alt="Image 3">
-                <img src="images/patrick.jpg" alt="Image 4">
-                <img src="images/john.jpg" alt="Image 5">
+                <img src="images/1.jpg" alt="Image 1">
+                <img src="images/2.jpg" alt="Image 2">
+                <img src="images/3.jpg" alt="Image 3">
+                <img src="images/4.jpg" alt="Image 4">
+                <img src="images/5.jpg" alt="Image 5">
+                <img src="images/6.jpg" alt="Image 6">
         </div>
     </div>
 </body>
@@ -70,6 +93,7 @@ body {
             justify-content: flex-start;
             align-items: center;
             height: 100vh;
+            background-color: #f0e5d6;
 }
 .layer {
             position: absolute;
@@ -85,54 +109,88 @@ body {
 
 .layer-1 {
     width: 70%;
-    background-color: lightcoral;
+    background-color: #f0e5d6;
     transform: translateX(5%);
-}    
-.layer-2 {
-          width: 70%;
-          background-color: lightblue;
-          transform: translateX(0);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
+} 
+.image-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 10px;
+    padding-top: 2%;
+    padding-left: 30%;
+    padding-right: 5%;
 }
+.image-group img {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #f0e5d6;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.image-group img:hover {
+    filter: none;
+}
+.image-group p{
+  font-family: 'FuturaPT-Heavy';
+  font-size: 20px;
+  color: #242a5c;
+}   
+
+.layer-2 {
+          width: 50%;
+          background-color: #f0e5d6;
+          transform: translateX(40%);
+          box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
+}
+.text-box {
+    padding-top: 2%;
+    padding-left: 40%;
+    padding-right: 10%;
+    color: #242a5c;
+}
+
+.text-box h {
+  font-size: 20px;
+  font-family: 'FuturaPT-Heavy';
+}
+
+.text-box p {
+  font-size: 15px;
+  font-family: 'FuturaPT-Book';
+}
+
 .layer-3 {
     flex: 1; 
     overflow-y: scroll; 
-    background-color: #f0f0f0;
-    padding: 20px; 
-    box-sizing: border-box; 
+    background-color: #f0e5d6;
+    padding: 0;  
     width: 70%;
     transform: translateX(-5%);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
 }
 .image-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .image-box img {
-    width: 100%;
-    height: auto; 
-    border: 10px solid white; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border: 10px solid #f0e5d6; 
+    box-sizing: border-box; 
 }
 
 .layer-1:hover {
           transform: translateX(45%); 
 }
 .layer-2:hover {
-          transform: translateX(30%); 
+          transform: translateX(100%); 
 }
 .layer-3:hover {
           transform: translateX(0);
 }
-.content {
-          padding: 20px;
-        }
-.image-group {
-          display: grid;
-          grid-template-columns: repeat(10, 1fr);
-          gap: 10px;
-        }
-.image-group img {
-          width: 100%;
-          height: auto;
-        }
+
 </style>
